@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Lab01.Properties {
+namespace Lab02.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -28,9 +28,9 @@ namespace Lab01.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-MFQH1VL\\MSSQLSERVER,1433;Initial Catalog=neptuno;Integrated S" +
             "ecurity=True")]
-        public string neptunoConnectionString {
+        public string Setting {
             get {
-                return ((string)(this["neptunoConnectionString"]));
+                return ((string)(this["Setting"]));
             }
         }
     }
