@@ -1,0 +1,4 @@
+﻿CREATE PROCEDURE USP_ListaProductos_Neptuno
+AS
+SELECT idproducto,nombreProducto,idProveedor,precioUnidad,suspendido
+FROM productos
