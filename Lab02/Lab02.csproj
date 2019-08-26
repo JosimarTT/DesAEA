@@ -66,6 +66,12 @@
     <Compile Include="Propuesto02.Designer.cs">
       <DependentUpon>Propuesto02.cs</DependentUpon>
     </Compile>
+    <Compile Include="Propuesto03.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Propuesto03.Designer.cs">
+      <DependentUpon>Propuesto03.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Ejercicio01.resx">
       <DependentUpon>Ejercicio01.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Propuesto02.resx">
       <DependentUpon>Propuesto02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Propuesto03.resx">
+      <DependentUpon>Propuesto03.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

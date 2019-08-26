@@ -16,7 +16,7 @@ namespace Lab02
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Propuesto02());
+            Application.Run(new Propuesto03());
         }
     }
 }

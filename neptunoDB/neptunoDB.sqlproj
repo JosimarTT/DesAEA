@@ -81,6 +81,8 @@
     <Build Include="dbo\Stored Procedures\USP_Lab02_CargarPedidos.sql" />
     <Build Include="dbo\Stored Procedures\USP_Lab02_CargarEmpleados.sql" />
     <Build Include="dbo\Stored Procedures\USP_Lab02_CargarDetallesProductoPorPedido.sql" />
+    <Build Include="dbo\Stored Procedures\USP_Lab02_SeleccionarPedidosPorMesAnio.sql" />
+    <Build Include="dbo\Stored Procedures\USP_Lab02_SeleccionarMesPorAnio.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment1.sql" />
