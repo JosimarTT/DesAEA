@@ -77,6 +77,10 @@
     <Build Include="dbo\Stored Procedures\USP_Lista_Pedidos_Anios.sql" />
     <Build Include="dbo\Stored Procedures\USP_Detalle_Pedido.sql" />
     <Build Include="dbo\Stored Procedures\USP_ClientesAll.sql" />
+    <Build Include="dbo\Stored Procedures\USP_Lab02_CargarPedidosPorEmpleado.sql" />
+    <Build Include="dbo\Stored Procedures\USP_Lab02_CargarPedidos.sql" />
+    <Build Include="dbo\Stored Procedures\USP_Lab02_CargarEmpleados.sql" />
+    <Build Include="dbo\Stored Procedures\USP_Lab02_CargarDetallesProductoPorPedido.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment1.sql" />
