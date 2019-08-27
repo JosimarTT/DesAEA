@@ -83,6 +83,9 @@
     <Build Include="dbo\Stored Procedures\USP_Lab02_CargarDetallesProductoPorPedido.sql" />
     <Build Include="dbo\Stored Procedures\USP_Lab02_SeleccionarPedidosPorMesAnio.sql" />
     <Build Include="dbo\Stored Procedures\USP_Lab02_SeleccionarMesPorAnio.sql" />
+    <Build Include="dbo\Stored Procedures\USP_Lab03_Total.sql" />
+    <Build Include="dbo\Stored Procedures\USP_Lab03_FECHAFECHA.sql" />
+    <Build Include="dbo\Stored Procedures\USP_Lab03_Detalle.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment1.sql" />
