@@ -86,6 +86,7 @@
     <Build Include="dbo\Stored Procedures\USP_Lab03_Total.sql" />
     <Build Include="dbo\Stored Procedures\USP_Lab03_FECHAFECHA.sql" />
     <Build Include="dbo\Stored Procedures\USP_Lab03_Detalle.sql" />
+    <Build Include="dbo\Stored Procedures\USP_Lab03_ListarClientes.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment1.sql" />
