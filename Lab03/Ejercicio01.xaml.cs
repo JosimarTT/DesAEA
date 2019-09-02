@@ -17,7 +17,7 @@ using System.Data;
 namespace Lab03
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Ejercicio01.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -44,7 +44,8 @@ namespace Lab03
 
         private void BtnConsultar_Click(object sender, RoutedEventArgs e)
         {
-            dgvPedido.ItemsSource = obj.ListaPedidoFechas(Convert.ToDateTime(txtFechaInicio.Text),
+            dgvPedido.ItemsSource = obj.ListaPedidoFechas(
+                Convert.ToDateTime(txtFechaInicio.Text),
                 Convert.ToDateTime(txtFechaFin.Text)).DefaultView;
         }
     }

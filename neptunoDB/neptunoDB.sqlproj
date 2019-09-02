@@ -87,6 +87,12 @@
     <Build Include="dbo\Stored Procedures\USP_Lab03_FECHAFECHA.sql" />
     <Build Include="dbo\Stored Procedures\USP_Lab03_Detalle.sql" />
     <Build Include="dbo\Stored Procedures\USP_Lab03_ListarClientes.sql" />
+    <Build Include="dbo\Stored Procedures\USP_Lab03_SeleccionarPedidoPorCliente.sql" />
+    <Build Include="dbo\Stored Procedures\USP_Lab03_ListarMeses.sql" />
+    <Build Include="dbo\Stored Procedures\USP_Lab03_ListarEmpleados.sql" />
+    <Build Include="dbo\Stored Procedures\USP_Lab03_ListarClientesPorEmpleado.sql" />
+    <Build Include="dbo\Stored Procedures\USP_Lab03_ListaAnios.sql" />
+    <Build Include="dbo\Stored Procedures\USP_Lab03_DetallesPorProducto.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment1.sql" />

@@ -12,7 +12,7 @@ namespace Lab03_Forms
     {
         public SqlConnection LeerCadena()
         {
-            SqlConnection connection = new SqlConnection("Data Source=DESKTOP-HE6KK6M\\MSSQLSERVER,1433;Initial Catalog=neptuno;Integrated Security=True");
+            SqlConnection connection = new SqlConnection("Data Source=DESKTOP-MFQH1VL\\MSSQLSERVER,1433;Initial Catalog=neptuno;Integrated Security=True");
             return connection;
         }
 
