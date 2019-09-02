@@ -14,11 +14,14 @@ namespace Lab03
         //Conexion
         public SqlConnection LeerCadena()
         {
-            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["neptunoDB"].ConnectionString);
+            //SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["neptunoDB"].ConnectionString);
+            SqlConnection connection = new SqlConnection("Data Source=DESKTOP-MFQH1VL\\MSSQLSERVER,1433;Initial Catalog=neptuno;Integrated Security=True");
             return connection;
         }
 
-        //INICIO EJERCICIO 01
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["neptunoDB"].ConnectionString);
+
+        #region EJERCICIO 01
         public DataTable ListaPedidoFechas(DateTime x, DateTime y)
         {
             using (SqlCommand cmd = new SqlCommand("USP_Lab03_FECHAFECHA", LeerCadena()))
@@ -72,9 +75,9 @@ namespace Lab03
                 }
             }
         }
-        //FIN EJERCICIO 01
+        #endregion
 
-        //INICIO EJERCICIO 02
+        #region EJERCICIO 02
         public DataTable EJ02_ListaAnios()
         {
             using(SqlCommand cmd = new SqlCommand("USP_Lab03_ListaAnios", LeerCadena()))
@@ -172,6 +175,29 @@ namespace Lab03
                 }
             }
         }
-        //FIN EJERCICIO 02
+        #endregion
+
+        #region EJERCICIO 03
+        public SqlDataReader EJ03_Listaclientes()
+        {
+            using (conn)
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("USP_Lab03_ListarClientes", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    SqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                    return dr;
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+
+            }
+           
+        }
+        #endregion
     }
 }
