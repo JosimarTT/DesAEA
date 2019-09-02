@@ -92,6 +92,7 @@
     <Compile Include="Ejercicio04.xaml.cs">
       <DependentUpon>Ejercicio04.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Entity\ECliente.cs" />
     <Compile Include="Entity\EEmpleado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

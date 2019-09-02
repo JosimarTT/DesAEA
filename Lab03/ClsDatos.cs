@@ -196,9 +196,43 @@ namespace Lab03
                     throw;
                 }
             }
+
         }
 
-        public List<EEmpleado> EJ03_ListarEmpleado()
+        public List<ECliente> EJ03_ListarClientes()
+        {
+            using (conn)
+            {
+                List<ECliente> Lista = new List<ECliente>();
+                ECliente cliente;
+                SqlDataReader dr;
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand("USP_Lab03_ListarClientes", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        dr = cmd.ExecuteReader();
+                        while (dr.Read())
+                        {
+                            cliente = new ECliente();
+                            cliente.idCliente = (string)(dr[0]);
+                            cliente.NombreCompañia = (string)(dr[1]);
+                            cliente.Pais = (string)(dr[2]);
+                            cliente.Telefono = (string)(dr[3]);
+                            Lista.Add(cliente);
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    System.Console.Write(e.Message);
+                }
+                return Lista;
+            }
+        }
+
+            public List<EEmpleado> EJ03_ListarEmpleado()
         {
             using (conn)
             {

@@ -29,9 +29,11 @@ namespace Lab03
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            DataTable dt = new DataTable();
-            dt.Load(datos.EJ03_Listaclientes());
-            dgCliente.ItemsSource = dt.DefaultView;
+            //DataTable dt = new DataTable();
+            //dt.Load(datos.EJ03_Listaclientes());
+            //dgCliente.ItemsSource = dt.DefaultView;
+
+            dgCliente.ItemsSource = datos.EJ03_ListarClientes();
             
         }
     }
