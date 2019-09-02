@@ -11,8 +11,6 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "neptunoDB", "neptunoDB\nept
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab03", "Lab03\Lab03.csproj", "{C819EC0E-090F-4387-AF0F-7FD2DA41D0A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab03-Forms", "Lab03-Forms\Lab03-Forms.csproj", "{0476AB34-9C85-4493-B58B-738FA552EBD8}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,10 +35,6 @@ Global
 		{C819EC0E-090F-4387-AF0F-7FD2DA41D0A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C819EC0E-090F-4387-AF0F-7FD2DA41D0A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C819EC0E-090F-4387-AF0F-7FD2DA41D0A0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0476AB34-9C85-4493-B58B-738FA552EBD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0476AB34-9C85-4493-B58B-738FA552EBD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0476AB34-9C85-4493-B58B-738FA552EBD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0476AB34-9C85-4493-B58B-738FA552EBD8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
