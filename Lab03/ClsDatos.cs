@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
+using Lab03.Entity;
 
 namespace Lab03
 {
@@ -194,10 +195,44 @@ namespace Lab03
                 {
                     throw;
                 }
-
             }
-           
+        }
+
+        public List<EEmpleado> EJ03_ListarEmpleado()
+        {
+            using (conn)
+            {
+                List<EEmpleado> Lista = new List<EEmpleado>();
+                EEmpleado empleado;
+                SqlDataReader dr;
+                try
+                {
+                    conn.Open();
+                    using(SqlCommand cmd = new SqlCommand("USP_Lab03_ListarEmpleados02", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        dr = cmd.ExecuteReader();
+                        while (dr.Read())
+                        {
+                            empleado = new EEmpleado();
+                            empleado.IdEmpleado = (int)(dr[0]);
+                            empleado.Apellidos = (string)(dr[1]);
+                            empleado.Nombre = (string)(dr[2]);
+                            empleado.FechaNacimiento = (DateTime)(dr[3]);
+                            empleado.direccion = (string)(dr[4]);
+                            Lista.Add(empleado);
+                        }
+                    }
+                }
+                catch(Exception e)
+                {
+                    System.Console.Write(e.Message);
+                }
+                return Lista;
+            }
         }
         #endregion
+
+
     }
 }

@@ -77,6 +77,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Ejercicio04.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ejercicio02.xaml.cs">
@@ -85,6 +89,10 @@
     <Compile Include="Ejercicio03.xaml.cs">
       <DependentUpon>Ejercicio03.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Ejercicio04.xaml.cs">
+      <DependentUpon>Ejercicio04.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\EEmpleado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
