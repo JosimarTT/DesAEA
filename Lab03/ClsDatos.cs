@@ -232,7 +232,7 @@ namespace Lab03
             }
         }
 
-            public List<EEmpleado> EJ03_ListarEmpleado()
+        public List<EEmpleado> EJ03_ListarEmpleado()
         {
             using (conn)
             {
