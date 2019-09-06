@@ -14,16 +14,7 @@
         </Style>
     </Window.Resources>
     <Grid >
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0*"/>
-            <ColumnDefinition Width="0*"/>
-            <ColumnDefinition Width="13*"/>
-            <ColumnDefinition Width="24*"/>
-            <ColumnDefinition Width="16*"/>
-            <ColumnDefinition Width="64*"/>
-            <ColumnDefinition Width="675*"/>
-        </Grid.ColumnDefinitions>
-        <StackPanel Grid.ColumnSpan="7">
+        <StackPanel>
             <StackPanel>
                 <Label Content="PEDIDO DE RAGS POR FECHA" />
             </StackPanel>
@@ -39,6 +30,7 @@
                           GridLinesVisibility="Vertical" HeadersVisibility="All"
                           Background="LightGray" RowBackground="LightYellow" AlternatingRowBackground="LightBlue"
                           BorderBrush="Gray" BorderThickness="5" SelectionChanged="DgvPedido_SelectionChanged"
+                          IsReadOnly="True"
                           />
             </StackPanel>
             <StackPanel>
@@ -48,7 +40,7 @@
                 <DataGrid Height="100px" x:Name="dgvDetallePedido" AutoGenerateColumns="True"
                           GridLinesVisibility="Vertical" HeadersVisibility="All"
                           Background="LightGray" RowBackground="LightYellow" AlternatingRowBackground="LightBlue"
-                          BorderBrush="Gray" BorderThickness="5"
+                          BorderBrush="Gray" BorderThickness="5" IsReadOnly="True"
                           />
             </StackPanel>
             <StackPanel Orientation="Horizontal">

@@ -11,6 +11,7 @@ namespace Business
     public class BPedido
     {
         private DPedido DPedido = null;
+
         public List<EPedido> GetPedidosEntreFechas(DateTime FechaInicio, DateTime FechaFin)
         {
             List<EPedido> pedidos = null;

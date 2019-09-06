@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Business;
+using Entity;
 
 namespace Lab04
 {
@@ -53,15 +54,18 @@ namespace Lab04
             try
             {
                 int idpedido;
-                var item = dgvPedido.SelectedItems as DataRowView;
-                if (item == null) return;
-                idpedido = Convert.ToInt32(item.Row["IdPedido"]);
+                EPedido pedido = (EPedido)dgvPedido.SelectedItem;
+                idpedido = pedido.IdPedido;
+                //var item = dgvPedido.SelectedItems as DataRowView;
+                //if (item == null) return;
+                //idpedido = Convert.ToInt32(item.Row["IdPedido"]);
                 bDetalleDePedido = new BDetalleDePedido();
                 dgvDetallePedido.ItemsSource = bDetalleDePedido.GetEDetalleDePedidosPorId(idpedido);
+                txtTotal.Text = bDetalleDePedido.GetDetalleTotalPorId(idpedido).ToString();
             }
-            catch (Exception)
+            catch(Exception ex)
             {
-                MessageBox.Show("Comunicarse con el administrador");
+                throw ex;
             }
             finally
             {
