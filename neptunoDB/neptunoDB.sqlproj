@@ -95,6 +95,10 @@
     <Build Include="dbo\Stored Procedures\USP_Lab03_DetallesPorProducto.sql" />
     <Build Include="dbo\Stored Procedures\USP_Lab03_ListarEmpleados02.sql" />
     <Build Include="dbo\Stored Procedures\USP_Lab04_DetallesPorPedido.sql" />
+    <Build Include="dbo\Stored Procedures\USP_Lab05_UpdCategoria.sql" />
+    <Build Include="dbo\Stored Procedures\USP_Lab05_InsCategoria.sql" />
+    <Build Include="dbo\Stored Procedures\USP_Lab05_GetCategoria.sql" />
+    <Build Include="dbo\Stored Procedures\USP_Lab05_DelCategoria.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment1.sql" />
