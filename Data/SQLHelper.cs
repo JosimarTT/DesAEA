@@ -12,7 +12,8 @@ namespace Data
     {
 
 
-        public static string Connection { get; } = "Data Source=DESKTOP-HE6KK6M\\MSSQLSERVER,1433;Initial Catalog=neptuno;Integrated Security=True";
+        //public static string Connection { get; } = "Data Source=DESKTOP-HE6KK6M\\MSSQLSERVER,1433;Initial Catalog=neptuno;Integrated Security=True";
+        public static string Connection { get; } = "Data Source=DESKTOP-MFQH1VL\\MSSQLSERVER,1433;Initial Catalog=neptuno;Integrated Security=True";
         /// <summary> 
         /// Set the connection, command, and then execute the command with non query. 
         /// </summary> 
