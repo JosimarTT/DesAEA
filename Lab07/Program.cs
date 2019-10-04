@@ -15,8 +15,9 @@ namespace Lab07
             var Pedidos = context.Pedidos.ToList();
             var Clientes = context.clientes.ToList();
             var DetallePedidos = context.detallesdepedidos.ToList();
+            var Proveedores = context.proveedores.ToList();
 
-            AmmountGreaterThan(Pedidos, DetallePedidos);
+            MoreThanTwoPedidos(Pedidos);
             Console.Read();
         }
 
@@ -125,12 +126,12 @@ namespace Lab07
 
             foreach(var item in lastFiveYears)
             {
-                Console.WriteLine(item.IdPedido + " " + item.Destinatario);
+                Console.WriteLine(item.IdPedido+"   "+item.Destinatario);
             }
         }
 
         //2. Todos los clientes que tengan más de 2 pedidos
-        static void MoreThanTwo(List<Pedido> pedidos)
+        static void MoreThanTwoPedidos(List<Pedido> pedidos)
         {
             var moreThanTwo =
                 from ped in pedidos
@@ -146,34 +147,46 @@ namespace Lab07
         }
 
         //3. Todos los pedidos donde el precio*cantidad>200
-        static void AmmountGreaterThan(List<Pedido> Pedidos, List<detallesdepedido> detPedidos)
+        static void AmmountGreaterThan(List<detallesdepedido> detPedidos)
         {
-            //var monto =
-            //    from ped in Pedidos
-            //    join det in detPedidos on ped.IdPedido equals det.idpedido
-            //    select new { idped = ped.IdPedido, monto = det.cantidad * det.preciounidad };
+            var monto =
+                from det in detPedidos
+                group det by det.idpedido into grp
+                select new
+                {
+                    idpedido = grp.Key,
+                    monto = grp.Sum(m => (m.cantidad * m.preciounidad))
+                };
 
-            //foreach(var item in monto)
-            //{
-            //    Console.WriteLine(item.idped + "  " + item.monto);
-            //}
-            var monto = detPedidos.GroupBy(l => l.idpedido)
-                      .Select(lg =>
-                            new {
-                                Owner = lg.Key,
-                                Boxes = lg.Count(),
-                                monto = lg.Sum(w => (w.preciounidad*w.cantidad))
-                            });
-            foreach(var item in monto)
+            foreach (var item in monto)
             {
-                Console.WriteLine(item.monto);
+                Console.WriteLine("pedidoID: " + item.idpedido +" - " + "Monto: " + item.monto);
             }
+
         }
+
         //4. Todos los proveedores que tengan más de 2 productos
+        static void MoreThanTwoProductos(List<proveedore> proveedores)
+           
+        {
+            var provs = proveedores.Where(prov => prov.productos.Count() > 2);
+            foreach(var items in provs)
+            {
+                Console.WriteLine(items.idProveedor + " - " + items.nombreCompañia);
+            };
+        }
+
         //5. Todos los productos que esten en más de 3 pedidos.
-        //5. Lista de empleados que coincidan en el codigo postal con los clientes.
-        //6. Lista de ciudades que tengan al menos un cliente, empleado o proveedor
-        //7. Todas las compañias que tengan al menos un empleado que gane más de 1000
+        static void MoreThanThreePedidos(List<detallesdepedido> detPedidos, List<producto> productos)
+        {
+            //var prods = 
+            //    from ped in detPedidos
+            //    join prod in productos on ped.idproducto equals prod.idproducto
+        }
+
+        //6. Lista de empleados que coincidan en el codigo postal con los clientes.
+        //7. Lista de ciudades que tengan al menos un cliente, empleado o proveedor
+        //8. Todas las compañias que tengan al menos un empleado que gane más de 1000
         
     }
 }
