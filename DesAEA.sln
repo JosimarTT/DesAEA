@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab07", "Lab07\Lab07.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab09", "Lab09\Lab09.csproj", "{13E532F1-CE9B-4271-B965-A31362736909}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "UniversityDB", "UniversityDB\UniversityDB.sqlproj", "{E76F6304-344A-4245-BD4D-F5BDDDF65994}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,12 @@ Global
 		{13E532F1-CE9B-4271-B965-A31362736909}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13E532F1-CE9B-4271-B965-A31362736909}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13E532F1-CE9B-4271-B965-A31362736909}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E76F6304-344A-4245-BD4D-F5BDDDF65994}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E76F6304-344A-4245-BD4D-F5BDDDF65994}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E76F6304-344A-4245-BD4D-F5BDDDF65994}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E76F6304-344A-4245-BD4D-F5BDDDF65994}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E76F6304-344A-4245-BD4D-F5BDDDF65994}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E76F6304-344A-4245-BD4D-F5BDDDF65994}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
