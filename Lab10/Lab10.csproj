@@ -127,6 +127,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OfficeAssignmentsController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -138,6 +139,10 @@
     <Compile Include="Migrations\201910220022367_v2.cs" />
     <Compile Include="Migrations\201910220022367_v2.Designer.cs">
       <DependentUpon>201910220022367_v2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910220116362_v3.cs" />
+    <Compile Include="Migrations\201910220116362_v3.Designer.cs">
+      <DependentUpon>201910220116362_v3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
@@ -191,6 +196,11 @@
     <Content Include="Views\Students\Details.cshtml" />
     <Content Include="Views\Students\Edit.cshtml" />
     <Content Include="Views\Students\Index.cshtml" />
+    <Content Include="Views\OfficeAssignments\Create.cshtml" />
+    <Content Include="Views\OfficeAssignments\Delete.cshtml" />
+    <Content Include="Views\OfficeAssignments\Details.cshtml" />
+    <Content Include="Views\OfficeAssignments\Edit.cshtml" />
+    <Content Include="Views\OfficeAssignments\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -214,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910220022367_v2.resx">
       <DependentUpon>201910220022367_v2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910220116362_v3.resx">
+      <DependentUpon>201910220116362_v3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

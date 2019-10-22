@@ -16,7 +16,9 @@ namespace Lab10.Models
         [StringLength(50)]
         [Display(Name = "Office Location")]
         public string Location { get; set; }
+        public int Activo { get; set; }
 
         public virtual Instructor Instructor { get; set; }
+
     }
 }
