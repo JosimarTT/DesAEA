@@ -18,7 +18,14 @@ namespace Lab10.Controllers
         // GET: Students
         public ActionResult Index()
         {
-            return View(db.Students.ToList());
+            List<Student> students = db.Students.ToList();
+            IEnumerable<Student> studentQuery =
+                from student in students
+                where student.Activo > 0
+                select student;
+            return View(studentQuery);
+            //return View(db.Students.ToList());
+            
         }
 
         // GET: Students/Details/5
@@ -49,6 +56,7 @@ namespace Lab10.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,LastName,FirstMidName,EnrollmentDate")] Student student)
         {
+            student.Activo = 1;
             if (ModelState.IsValid)
             {
                 db.People.Add(student);
@@ -81,6 +89,7 @@ namespace Lab10.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ID,LastName,FirstMidName,EnrollmentDate")] Student student)
         {
+            student.Activo = 1;
             if (ModelState.IsValid)
             {
                 db.Entry(student).State = EntityState.Modified;
@@ -111,7 +120,8 @@ namespace Lab10.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Student student = db.Students.Find(id);
-            db.People.Remove(student);
+            //db.People.Remove(student);
+            student.Activo = 0;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
