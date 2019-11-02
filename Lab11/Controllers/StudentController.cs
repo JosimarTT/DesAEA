@@ -38,6 +38,7 @@ namespace Lab11.Controllers
         [HttpPost]
         public ActionResult CreateStudent(Student student)
         {
+            student.CreatedDate = DateTime.Now;
             service.Insert(student);
             string message = "SUCCESS";
             return Json(new { Message = message, JsonRequestBehavior.AllowGet});
