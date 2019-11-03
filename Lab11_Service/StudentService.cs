@@ -34,6 +34,7 @@ namespace Lab11_Service
         {
             using(var context = new SchoolContext())
             {
+                student.CreatedDate = DateTime.UtcNow;
                 context.Students.Add(student);
                 context.SaveChanges();
             }
@@ -46,6 +47,7 @@ namespace Lab11_Service
                 var studentNew = context.Students.Find(ID);
 
                 studentNew.studentName = student.studentName;
+                studentNew.studentLastName = student.studentLastName;
                 studentNew.studentAddress = student.studentAddress;
 
                 context.SaveChanges();

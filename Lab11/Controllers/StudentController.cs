@@ -20,7 +20,10 @@ namespace Lab11.Controllers
                          {
                              ID = c.studentID,
                              Name = c.studentName,
-                             Address = c.studentAddress
+                             LastName = c.studentLastName,
+                             Address = c.studentAddress,
+                             CreatedDate = c.CreatedDate,
+                             UpdatedDate = c.UpdatedDate
                          }).ToList();
             return View(model);
         }
@@ -38,7 +41,6 @@ namespace Lab11.Controllers
         [HttpPost]
         public ActionResult CreateStudent(Student student)
         {
-            student.CreatedDate = DateTime.Now;
             service.Insert(student);
             string message = "SUCCESS";
             return Json(new { Message = message, JsonRequestBehavior.AllowGet});

@@ -28,17 +28,28 @@
     </div> <hr />
     <table id="tblStudent" class="table table-bordered table-striped table-responsive table-hover">
         <thead>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <th align="left" class="productth">@item.ID</th>
-                    <th align="left" class="productth">@item.Name</th>
-                    <th align="left" class="productth">@item.Address</th>
-                </tr>
-            }
-
+            <tr>
+                <th align="left" class="productth">ID</th>
+                <th align="left" class="productth">Name</th>
+                <th align="left" class="productth">Last Name</th>
+                <th align="left" class="productth">Address</th>
+                <th align="left" class="productth">Date Created</th>
+                <th align="left" class="productth">Date Updated</th>
+            </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
+            @foreach (var student in Model)
+            {
+            <tr>
+                <td align="left" class="productth">@student.ID</td>
+                <td align="left" class="productth">@student.Name</td>
+                <td align="left" class="productth">@student.LastName</td>
+                <td align="left" class="productth">@student.Address</td>
+                <td align="left" class="productth">@student.CreatedDate</td>
+                <td align="left" class="productth">@student.UpdatedDate</td>
+            </tr>
+            }
+        </tbody>
     </table>
 </div>
 
@@ -74,7 +85,7 @@
             });
         });
 
-        function LoadData() {
+        @*function LoadData() {
             $("#tblStudent tbody tr").remove();
             $.ajax({
                 type: "POST",
@@ -100,6 +111,6 @@
                 }
             });
             return false;
-        }
+        }*@
     </script>
 }
