@@ -12,8 +12,12 @@
                 c => new
                     {
                         studentID = c.Int(nullable: false, identity: true),
+                        studentCode = c.Int(nullable: false),
                         studentName = c.String(nullable: false),
-                        studentAddress = c.Int(nullable: false),
+                        studentLastName = c.String(),
+                        studentAddress = c.String(nullable: false),
+                        CreatedDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
+                        UpdatedDate = c.DateTime(precision: 7, storeType: "datetime2"),
                     })
                 .PrimaryKey(t => t.studentID);
             

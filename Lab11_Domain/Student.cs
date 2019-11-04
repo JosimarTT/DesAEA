@@ -18,9 +18,11 @@ namespace Lab11_Domain
         public string studentLastName { get; set; }
         [Required]
         public string studentAddress { get; set; }
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+        [Column(TypeName = "DateTime2")]
         public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        public DateTime UpdatedDate { get; set; }
+
+        [Column(TypeName = "DateTime2")]
+        public DateTime? UpdatedDate { get; set; }        
     }
 }

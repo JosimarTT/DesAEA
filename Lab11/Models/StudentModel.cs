@@ -12,6 +12,6 @@ namespace Lab11.Models
         public string LastName { get; set; }
         public string Address { get; set; }
         public DateTime CreatedDate { get; set; }
-        public DateTime UpdatedDate { get; set; }
+        public DateTime? UpdatedDate { get; set; }
     }
 }

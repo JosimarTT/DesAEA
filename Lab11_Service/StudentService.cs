@@ -34,7 +34,6 @@ namespace Lab11_Service
         {
             using(var context = new SchoolContext())
             {
-                student.CreatedDate = DateTime.UtcNow;
                 context.Students.Add(student);
                 context.SaveChanges();
             }
