@@ -78,8 +78,14 @@
                     data: data,
                     dataType: 'json',
                     contentType: "application/json; charset-utf-8",
-                    success: function () {
-                        AddRow(std.studentName, std.studentName);
+                    success: function (data) {
+                        let newStudent = data.newStudent;
+                        AddRow(
+                            newStudent.studentID,
+                            newStudent.studentName,
+                            newStudent.studentLastName,
+                            newStudent.studentAddress,
+                            newStudent.CreatedDate);
                     },
                     error: function () {
                         alert("Error while inserting data");
@@ -89,14 +95,14 @@
             });
         });
 
-        function AddRow(name, address) {
+        function AddRow(id, name, lastName, address, createdDate) {
             var row = "<tr>"
+                + "<td class='producttd'>" + id + "</td>"
                 + "<td class='producttd'>" + name + "</td>"
+                + "<td class='producttd'>" + lastName + "</td>"
                 + "<td class='producttd'>" + address + "</td>"
-                + "<td class='producttd'>" + name + "</td>"
-                + "<td class='producttd'>" + name + "</td>"
-                + "<td class='producttd'>" + name + "</td>"
-                + "<td class='producttd'>" + name + "</td>"
+                + "<td class='producttd'>" + createdDate + "</td>"
+                + "<td class='producttd'></td>"
                 + "</tr>";
              $("#tblStudent tbody").append(row);
         };

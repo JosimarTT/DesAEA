@@ -13,7 +13,7 @@ namespace Lab11_Infraestructure.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201911040040580_v1"; }
+            get { return "201911042121174_v1"; }
         }
         
         string IMigrationMetadata.Source

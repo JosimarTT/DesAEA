@@ -43,7 +43,7 @@ namespace Lab11.Controllers
         {
             service.Insert(student);
             string message = "SUCCESS";
-            return Json(new { Message = message, JsonRequestBehavior.AllowGet});
+            return Json(new { Message = message, newStudent = student, JsonRequestBehavior.AllowGet});
         }
     }
 }
