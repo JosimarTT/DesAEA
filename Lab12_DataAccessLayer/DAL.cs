@@ -48,8 +48,8 @@ namespace Lab12_DataAccessLayer
                 if (prodItem != null)
                 {
                     prodItem.ProductName = productItem.ProductName;
-                    prodItem.Quantity = prodItem.Quantity;
-                    prodItem.Price = prodItem.Price;
+                    prodItem.Quantity = productItem.Quantity;
+                    prodItem.Price = productItem.Price;
                     DbContext.SaveChanges();
                 }
                 status = true;
