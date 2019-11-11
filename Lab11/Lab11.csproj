@@ -134,6 +134,8 @@
     </Compile>
     <Compile Include="Models\StudentModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxy\ResponseProxy.cs" />
+    <Compile Include="Proxy\StudentProxy.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -189,16 +191,6 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Lab11_Domain\Lab11_Domain.csproj">
-      <Project>{be538a6b-d0d2-4af4-8e98-aec6a67591fa}</Project>
-      <Name>Lab11_Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Lab11_Service\Lab11_Service.csproj">
-      <Project>{c7dc53d3-0477-4b61-b3a9-79acd6d8a1dc}</Project>
-      <Name>Lab11_Service</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

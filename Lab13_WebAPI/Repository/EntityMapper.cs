@@ -15,9 +15,9 @@ namespace Lab13_WebAPI.Repository
             Mapper.CreateMap<Student, Models.StudentModel>();
         }
 
-        public TDestination translate(TSource obj)
+        public TDestination Translate(TSource obj)
         {
-            return Mapper.Map(TDestination(obj));
+            return Mapper.Map<TDestination>(obj);
         }
     }
 }

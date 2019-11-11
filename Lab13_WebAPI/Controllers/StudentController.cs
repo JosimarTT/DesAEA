@@ -29,7 +29,7 @@ namespace Lab13_WebAPI.Controllers
             List<StudentModel> Students = new List<StudentModel>();
             foreach (var item in prodList)
             {
-                Students.Add(mapObj.translate(item));
+                Students.Add(mapObj.Translate(item));
             }
             return Json<List<StudentModel>>(Students);
         }
@@ -40,7 +40,7 @@ namespace Lab13_WebAPI.Controllers
             EntityMapper<Student, StudentModel> mapObj = new EntityMapper<Student, StudentModel>();
             Student dalStudent = Service.GetById(id);
             StudentModel Students = new StudentModel();
-            Students = mapObj.translate(dalStudent);
+            Students = mapObj.Translate(dalStudent);
             return Json<StudentModel>(Students);
         }
 
@@ -52,7 +52,7 @@ namespace Lab13_WebAPI.Controllers
             {
                 EntityMapper<StudentModel, Student> mapObj = new EntityMapper<StudentModel, Student>();
                 Student StudentObj = new Student();
-                StudentObj = mapObj.translate(Student);
+                StudentObj = mapObj.Translate(Student);
                 Service.Insert(StudentObj);
                 status = true;
             }
@@ -65,7 +65,7 @@ namespace Lab13_WebAPI.Controllers
             bool status = false;
             EntityMapper<StudentModel, Student> mapObj = new EntityMapper<StudentModel, Student>();
             Student StudentObj = new Student();
-            StudentObj = mapObj.translate(Student);
+            StudentObj = mapObj.Translate(Student);
             Service.Update(StudentObj, StudentObj.studentID);
             status = true;
             return status;
