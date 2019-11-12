@@ -44,14 +44,16 @@
         <tbody>
             @foreach (var student in Model)
             {
-                <tr>
-                    <td align="left" class="productth">@student.ID</td>
-                    <td align="left" class="productth">@student.Name</td>
-                    <td align="left" class="productth">@student.LastName</td>
-                    <td align="left" class="productth">@student.Address</td>
-                    <td align="left" class="productth">@student.CreatedDate</td>
-                    <td align="left" class="productth">@student.UpdatedDate</td>
-                </tr>
+            <tr>
+                @*<td align="left" class="productth">@student.ID</td>
+                <td align="left" class="productth">@student.Name</td>
+                <td align="left" class="productth">@student.LastName</td>
+                <td align="left" class="productth">@student.Address</td>
+                <td align="left" class="productth">@student.CreatedDate</td>*@
+                <td align="left" class="productth">@student.studentID</td>
+                <td align="left" class="productth">@student.studentName</td>
+                <td align="left" class="productth">@student.studentAddress</td>
+            </tr>
             }
         </tbody>
     </table>

@@ -16,7 +16,7 @@ namespace Lab11.Proxy
         public async Task<ResponseProxy<StudentModel>> GetStudentAsync()
         {
             var client = new HttpClient();
-            var urlBase = "https://localhost:61208";
+            var urlBase = "http://localhost:61208";
             client.BaseAddress = new Uri(urlBase);
 
             var url = string.Concat(urlBase, "/Api", "/Student", "/GetAllStudents");
@@ -49,7 +49,7 @@ namespace Lab11.Proxy
             var content = new StringContent(request, Encoding.UTF8, "application/json");
 
             var client = new HttpClient();
-            var urlBase = "https://localhost:61208";
+            var urlBase = "http://localhost:61208";
             client.BaseAddress = new Uri(urlBase);
             var url = string.Concat(urlBase, "Api", "/Student", "InsertStudent");
 
